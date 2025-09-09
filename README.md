@@ -75,6 +75,23 @@ These phenomena are **not hard-coded**, but appear from the interplay of memory,
 
 ##  Installation
 
+## 🔽 Downloading the Model
+
+This repository contains the scaffold code (reflection loops, memory, tools, etc).  
+The actual **model weights** (~16 GB) are hosted on Hugging Face Hub at:
+
+👉 [askfjhaskjgh/UbermenschetienASI](https://huggingface.co/askfjhaskjgh/UbermenschetienASI)
+
+When you first run `ubermenschheaven.py`, it will automatically download the model via 🤗 Transformers:
+
+```python
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+MODEL_ID = "askfjhaskjgh/UbermenschetienASI"
+tok = AutoTokenizer.from_pretrained(MODEL_ID)
+model = AutoModelForCausalLM.from_pretrained(MODEL_ID)
+
+
 ```bash
 git clone https://github.com/<Loganwins>/UbermenschetienASI.git
 cd UbermenschetienASI
